@@ -2,10 +2,12 @@
 import React from 'react'
 
 export const Button = (props) => {
-  const { label } = props
+  const { label, ...otherProps } = props
 
   return (
-    <button>
+    <button
+      {...otherProps}
+    >
       {label}
     </button>
   )
@@ -16,7 +18,7 @@ export const App = () => {
     <div>
       CodeRoad APP
       <Button
-        label={'Click me'}
+        label={'Click me!'}
         className={'button'}
         onClick={() => console.log('CLICK')}
       />
