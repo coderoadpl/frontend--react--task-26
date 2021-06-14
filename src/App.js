@@ -17,6 +17,8 @@ export const App = () => {
       CodeRoad APP
       <Button
         label={'Click me'}
+        className={'button'}
+        onClick={() => console.log('CLICK')}
       />
     </div>
   )
